@@ -1,23 +1,28 @@
-let step = 0
 input.onButtonPressed(Button.A, function () {
-    check.send(step)
+    check.startCounting()
 })
 input.onButtonPressed(Button.AB, function () {
-    bluetooth.advertiseUrl(
-    "https://haha.com?step=" + ("" + step),
-    7,
-    false
-    )
-    basic.clearScreen()
-    led.plot(3, 3)
+    check.send()
 })
+// input.onButtonPressed(Button.AB, function () {
+// let step = 0
+// startTime = control.millis()
+// bluetooth.advertiseUrl(
+// "https://haha.com?step=" + ("" + step),
+// 7,
+// false
+// )
+// basic.clearScreen()
+// led.plot(3, 3)
+// while (control.millis() - startTime < 1000 * 5) {
+// basic.showIcon(IconNames.Butterfly)
+// }
+// bluetooth.stopAdvertising()
+// basic.showIcon(IconNames.StickFigure)
+// })
 input.onButtonPressed(Button.B, function () {
-    bluetooth.stopAdvertising()
-})
-input.onGesture(Gesture.Shake, function () {
-    step += 1
+    check.stopCounting()
 })
 basic.forever(function () {
-    basic.showNumber(step)
-    basic.pause(100)
+    check.showStepCount()
 })

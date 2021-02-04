@@ -16,18 +16,69 @@ enum MyEnum {
  */
 //% weight=100 color=#BB8FCE icon="\uf00c"
 namespace check {
+    //variables
+    let step = 0;
+    let counting: Boolean = false;
+    let sendingBluetooth: Boolean = false;
+
+    
+    /**
+     * TODO: start counting steps
+     */
+    //%block weight=3000
+    export function startCounting(): void {
+        counting = true
+    }
+    /**
+     * TODO: stop counting steps
+     */
+    //%block weight=2000
+    export function stopCounting(): void {
+        counting = false
+    }
+
+    /**
+     * TODO: show number of steps
+     */
+    //%block weight=1000
+    export function showStepCount(): void {
+        if (!sendingBluetooth) {
+            basic.showNumber(step_count())
+            basic.pause(100)
+        }
+    }
+
     /**
      * TODO: drag your step variable here
      * @param n describe parameter here, eg: step
      * @param s describe parameter here, eg: "Hello"
      * @param e describe parameter here
      */
-    //% block
-    export function send(n:number): void {
+    //% block weight=100
+    export function send(): void {
         // Add code here
-        bluetooth.advertiseUrl("https://check.com?step=" + ("" + n), 7, false)
+        sendingBluetooth = true;
+        let startTime = control.millis()
+        bluetooth.advertiseUrl("https://check.com?step=" + ("" + step), 7, false)
         basic.clearScreen()
-        basic.showIcon(IconNames.Happy)
+        while (control.millis() - startTime < 1000 * 5) {
+            basic.showIcon(IconNames.Happy)
+        }
+        bluetooth.stopAdvertising()
+        sendingBluetooth = false;
+        basic.showIcon(IconNames.StickFigure)
+    }
+
+    //helper functions
+
+    input.onGesture(Gesture.Shake, function () {
+        if (counting) {
+            step += 1
+        }
+    })
+
+    function step_count(): number {
+        return step
     }
 
 }
