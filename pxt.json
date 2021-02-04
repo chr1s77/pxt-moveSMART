@@ -1,7 +1,8 @@
 {
     "name": "check",
     "version": "0.0.1",
-    "description": "",
+    "description": "send the value of a variable via bluetooth",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "microphone": "*",
