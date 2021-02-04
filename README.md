@@ -1,6 +1,12 @@
 
 > Open this page at [https://.github.io//](https://.github.io//)
 
+## Install
+Enter and search the below URL in the micro:bit extention page.
+```
+https://github.com/graceleee/pxt-check.git
+```
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
