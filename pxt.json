@@ -23,4 +23,13 @@
         "pxt": "6.0.35"
     },
     "preferredEditor": "blocksprj"
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    }
 }
