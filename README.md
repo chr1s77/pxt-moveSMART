@@ -4,7 +4,7 @@
 ## Install
 Enter and search the below URL in the micro:bit extention page.
 ```
-https://github.com/graceleee/pxt-check.git
+https://github.com/graceleee/pxt-moveSMART.git
 ```
 
 ## Use as Extension
