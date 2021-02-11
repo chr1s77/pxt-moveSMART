@@ -13,7 +13,8 @@
         "main.ts",
         "README.md",
         "main.py",
-        "custom.ts"
+        "custom.ts",
+        "tutorial.md"
     ],
     "targetVersions": {
         "branch": "v3.0.61",
