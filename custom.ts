@@ -14,7 +14,7 @@ enum MyEnum {
 /**
  * Custom blocks
  */
-//% weight=100 color=#BB8FCE icon="\uf00c"
+//% weight=100 color=#BB8FCE icon="\uf554"
 namespace check {
     //variables
     let step = 0;
