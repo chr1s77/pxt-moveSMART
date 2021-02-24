@@ -15,7 +15,7 @@ enum MyEnum {
  * Custom blocks
  */
 //% weight=100 color=#BB8FCE icon="\uf554"
-namespace check {
+namespace moveSMART{
     //variables
     let step = 0;
     let counting: Boolean = false;

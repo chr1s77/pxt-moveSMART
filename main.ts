@@ -1,8 +1,8 @@
 input.onButtonPressed(Button.A, function () {
-    check.startCounting()
+    moveSMART.startCounting()
 })
 input.onButtonPressed(Button.AB, function () {
-    check.send()
+    moveSMART.send()
 })
 // input.onButtonPressed(Button.AB, function () {
 // let step = 0
@@ -21,8 +21,9 @@ input.onButtonPressed(Button.AB, function () {
 // basic.showIcon(IconNames.StickFigure)
 // })
 input.onButtonPressed(Button.B, function () {
-    check.stopCounting()
+    moveSMART.stopCounting()
 })
 basic.forever(function () {
-    check.showStepCount()
+    moveSMART.showStepCount()
 })
+
