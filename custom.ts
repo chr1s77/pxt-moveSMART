@@ -14,7 +14,7 @@ enum MyEnum {
 /**
  * Custom blocks
  */
-//% weight=100 color=#BB8FCE icon="\uf554"
+//% weight=100 color=#FF3F00 icon="\uf554"
 namespace moveSMART{
     //variables
     let step = 0;
