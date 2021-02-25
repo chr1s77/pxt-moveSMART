@@ -1,6 +1,6 @@
 {
     "name": "moveSMART",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "send the value of a variable via bluetooth",
     "license": "MIT",
     "dependencies": {
