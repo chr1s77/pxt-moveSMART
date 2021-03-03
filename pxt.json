@@ -1,6 +1,6 @@
 {
     "name": "moveSMART",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "send the value of a variable via bluetooth",
     "license": "MIT",
     "dependencies": {
@@ -9,19 +9,21 @@
         "bluetooth": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
         "README.md",
-        "main.py",
-        "custom.ts",
-        "tutorial1.md"
     ],
-    "targetVersions": {
-        "branch": "v3.0.61",
-        "tag": "v3.0.61",
-        "commits": "https://github.com/microsoft/pxt-microbit/commits/9ff91acb8524c6a52fee90cf7194a4643c424363",
-        "target": "3.0.61",
-        "pxt": "6.0.35"
-    },
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
     "preferredEditor": "blocksprj"
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 1
+                }
+            }
+        }
+    } 
 }
