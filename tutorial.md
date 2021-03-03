@@ -1,6 +1,3 @@
-```package
-check=https://github.com/graceleee/pxt-moveSMART
-```
 # My Tutorial
 
 ## Step 1
