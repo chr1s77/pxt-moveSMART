@@ -14,7 +14,7 @@
         "README.md",
         "main.py",
         "custom.ts",
-        "tutorial.md"
+        "tutorial1.md"
     ],
     "targetVersions": {
         "branch": "v3.0.61",
